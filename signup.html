@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <div class="hero">
+        <div class="form-box">
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="login()">Login</button>
+                <button type="button" class="toggle-btn" onclick="Signin()">Signin</button>
+            </div>
+            <form id="Login" class="input-group" action="login.py">
+                <input type="text" class="input-field" placeholder="Email Id" name="email_id" required>
+                <input type="password" class="input-field" placeholder="Password" name="password" required>
+                <input type="checkbox" class="check-box" id="remember"><label for="remember">Remember password</label>
+                <button type="submit" class="submit-btn">Login</button>
+            </form>
+            <form id="Signup" class="input-group" action="signup.py">
+                <input type="text" class="input-field" placeholder="Username"  name="username" required>
+                <input type="email" class="input-field" placeholder="Email Id" name="email_id" required>
+                <input type="password" class="input-field" placeholder="Password" name="password"  required>
+                <input type="checkbox" class="check-box" id="agree"><label for="agree">I agree to the terms & conditions</label>
+                <button type="submit" class="submit-btn">Signin</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        var x = document.getElementById("Login");
+        var y = document.getElementById("Signup");
+        var z = document.getElementById("btn");
+
+        function Signin(){
+            x.style.left = "-400px";
+            y.style.left = "10px";
+            z.style.left = "110px";
+        }
+        function login(){
+            x.style.left = "10px";
+            y.style.left = "450px";
+            z.style.left = "0";
+        }
+    </script>
+</body>
+</html>
